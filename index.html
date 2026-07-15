@@ -1,442 +1,855 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html class="scroll-smooth" lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rif Epoxy Floors demo website voor epoxy vloeren, schilderwerk, dakcoating en afwerking in Paramaribo. Vraag eenvoudig een prijsindicatie aan via WhatsApp.">
-  <meta name="theme-color" content="#12324a">
-  <title>Rif Epoxy Floors | Epoxy vloeren, schilderwerk en afwerking</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rifgroup N.V. | Epoxyvloeren &amp; Schilderwerk in Paramaribo, Suriname</title>
+<meta name="description" content="Epoxyvloeren, flakes en marmer epoxy, schilderwerk en dakspuiten in Paramaribo, Suriname. Een vloer die makkelijk schoonmaakt en jaren mooi blijft. Vraag gratis een prijs via WhatsApp."/>
+<meta property="og:title" content="Rifgroup N.V. | Epoxyvloeren &amp; Schilderwerk in Paramaribo"/>
+<meta property="og:description" content="Epoxy vloeren, schilderwerk en dakspuiten in Suriname. Vraag gratis een prijs via WhatsApp: +597 863-0295."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="nl_SR"/>
+<link rel="icon" type="image/jpeg" href="assets/rif-logo.jpg"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Rifgroup N.V.",
+  "description": "Epoxyvloeren, schilderwerk, dakspuiten, plafond- en drywall-afwerking in Paramaribo, Suriname.",
+  "telephone": "+597 863-0295",
+  "address": { "@type": "PostalAddress", "addressLocality": "Paramaribo", "addressCountry": "SR" },
+  "areaServed": "Paramaribo en omliggende gebieden",
+  "sameAs": ["https://www.facebook.com/Rifspraypaint"]
+}
+</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Inter:wght@400..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary": "#001927",
+                "tertiary": "#380002",
+                "outline-variant": "#c2c7cd",
+                "on-secondary-container": "#007318",
+                "on-surface-variant": "#42474c",
+                "secondary-fixed-dim": "#77dd71",
+                "surface-container-lowest": "#ffffff",
+                "surface-bright": "#f7fafb",
+                "inverse-surface": "#2d3132",
+                "on-primary-fixed": "#001e2d",
+                "on-primary-fixed-variant": "#244b61",
+                "on-secondary": "#ffffff",
+                "on-tertiary-fixed": "#410003",
+                "on-surface": "#181c1d",
+                "surface-container-highest": "#e0e3e4",
+                "on-secondary-fixed": "#002203",
+                "surface-dim": "#d7dadb",
+                "tertiary-fixed-dim": "#ffb3ad",
+                "secondary-fixed": "#93fa8b",
+                "tertiary-container": "#5f0007",
+                "surface-variant": "#e0e3e4",
+                "on-tertiary": "#ffffff",
+                "surface": "#f7fafb",
+                "on-primary": "#ffffff",
+                "primary-container": "#002f44",
+                "surface-container": "#ebeeef",
+                "inverse-on-surface": "#eef1f2",
+                "inverse-primary": "#a6cbe6",
+                "on-background": "#181c1d",
+                "error-container": "#ffdad6",
+                "secondary": "#006e17",
+                "secondary-container": "#90f788",
+                "on-primary-container": "#7297b0",
+                "primary-fixed": "#c6e7ff",
+                "surface-container-low": "#f1f4f5",
+                "on-error": "#ffffff",
+                "tertiary-fixed": "#ffdad6",
+                "surface-container-high": "#e5e9ea",
+                "on-secondary-fixed-variant": "#00530f",
+                "surface-tint": "#3e637a",
+                "primary-fixed-dim": "#a6cbe6",
+                "on-tertiary-fixed-variant": "#930011",
+                "background": "#f7fafb",
+                "error": "#ba1a1a",
+                "on-error-container": "#93000a",
+                "outline": "#72787d",
+                "on-tertiary-container": "#ff5953"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "container-max": "1280px",
+                "margin-mobile": "20px",
+                "unit": "8px",
+                "margin-desktop": "64px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "headline-lg": ["Space Grotesk"],
+                "body-lg": ["Inter"],
+                "display-lg": ["Space Grotesk"],
+                "headline-lg-mobile": ["Space Grotesk"],
+                "headline-md": ["Space Grotesk"],
+                "body-md": ["Inter"],
+                "label-md": ["Space Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gloss-effect {
+            background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.05) 100%);
+        }
+        .shadow-ambient {
+            box-shadow: 0 20px 50px -12px rgba(0, 25, 39, 0.2);
+        }
+        .text-balance { text-wrap: balance; }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .font-display { font-family: 'Space Grotesk', sans-serif; }
+
+        /* Immersive Nav Offset */
+        nav.topnav { margin-bottom: -64px; }
+
+        /* Native FAQ accordion */
+        details > summary { list-style: none; cursor: pointer; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] .faq-chevron { transform: rotate(180deg); }
+        .faq-chevron { transition: transform .3s; }
+
+        /* Floating Grid / Masonry-ish */
+        .floating-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+        }
+        .float-item-1 { grid-column: 1 / span 7; grid-row: 1 / span 2; }
+        .float-item-2 { grid-column: 8 / span 5; grid-row: 1 / span 1; }
+        .float-item-3 { grid-column: 8 / span 5; grid-row: 2 / span 2; }
+        .float-item-4 { grid-column: 1 / span 7; grid-row: 3 / span 1; }
+
+        @media (max-width: 768px) {
+            .floating-grid { display: block; }
+            .floating-grid > div { margin-bottom: 20px; }
+        }
+    </style>
 </head>
-<body>
-  <div class="site-shell">
-    <div class="topbar">
-      <div class="container topbar-row">
-        <p>Demo concept voor Rif Epoxy Floors. Gemaakt om meer complete aanvragen via WhatsApp op te vangen.</p>
-        <a data-wa-link href="https://wa.me/5978515500?text=Hallo%20Rif%20Epoxy%20Floors%2C%20ik%20wil%20graag%20meer%20informatie." target="_blank" rel="noreferrer">WhatsApp: <span data-phone-label>+597 851-5500</span></a>
-      </div>
-    </div>
+<body class="bg-background text-on-background selection:bg-secondary selection:text-on-secondary overflow-x-hidden">
+<a class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:top-2 focus:left-2 focus:bg-secondary focus:text-white focus:px-4 focus:py-2 focus:rounded" href="#services">Ga direct naar de inhoud</a>
 
-    <header class="site-header">
-      <div class="container nav-row">
-        <a class="brand" href="#top" aria-label="Rif Epoxy Floors homepage">
-          <img src="assets/badge-rif.svg" alt="Rifgroup badge">
-          <span>
-            <strong>Rif Epoxy Floors</strong>
-            <small>Rifgroup NV | epoxy, painting and finishing</small>
-          </span>
+<!-- TopNavBar (Transparent Overlay) -->
+<nav aria-label="Hoofdmenu" class="topnav sticky top-0 z-50 h-16 transition-all duration-500">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-full">
+<a class="flex items-center gap-2 md:gap-3 font-display text-[17px] md:text-[24px] font-bold text-white tracking-tight drop-shadow-md" href="#">
+<img alt="Logo van Rifgroup N.V." class="w-8 h-8 md:w-9 md:h-9 rounded-full object-cover border border-white/30" src="assets/rif-logo.jpg"/>
+Rifgroup N.V.
+</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-white/90 hover:text-secondary transition-colors" href="#services">Diensten</a>
+<a class="font-label-md text-label-md text-white/90 hover:text-secondary transition-colors" href="#voor-wie">Voor wie</a>
+<a class="font-label-md text-label-md text-white/90 hover:text-secondary transition-colors" href="#werkwijze">Hoe het werkt</a>
+<a class="font-label-md text-label-md text-white/90 hover:text-secondary transition-colors" href="#projects">Projecten</a>
+<a class="font-label-md text-label-md text-white/90 hover:text-secondary transition-colors" href="#reviews">Reviews</a>
+<a class="font-label-md text-label-md text-white/90 hover:text-secondary transition-colors" href="#faq">Vragen</a>
+</div>
+<div class="flex items-center gap-3">
+<a class="bg-secondary text-on-secondary px-3 py-2 text-[12px] md:px-5 md:py-2.5 md:text-[14px] rounded font-label-md active:scale-95 transition-all duration-300 shadow-lg hover:brightness-110" href="#quote">
+            Vraag een prijs
         </a>
-
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span class="sr-only">Open menu</span>
-        </button>
-
-        <nav id="site-nav" class="site-nav">
-          <a href="#diensten">Diensten</a>
-          <a href="#waarde">Waarom dit werkt</a>
-          <a href="#projecten">Projecten</a>
-          <a href="#faq">FAQ</a>
-          <a class="nav-cta" href="#offerte">Vraag prijs aan</a>
-        </nav>
-      </div>
-    </header>
-
-    <main id="top">
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <div class="eyebrow">
-              <span class="eyebrow-dot"></span>
-              Beschikbaar voor nieuwe projecten in Paramaribo
-            </div>
-            <h1>Van eerste indruk naar echte aanvraag in een paar klikken.</h1>
-            <p class="lead">
-              Rif Epoxy Floors helpt klanten met epoxy vloeren, schilderwerk, dakcoating en nette afwerking.
-              Deze demo zet alle diensten op een professionele plek, zodat prospects sneller begrijpen
-              wat mogelijk is en direct een complete WhatsApp aanvraag versturen.
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu" class="md:hidden w-10 h-10 flex items-center justify-center text-white bg-white/10 rounded" id="menuBtn" type="button">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+<div class="hidden md:hidden bg-primary/95 backdrop-blur-md px-gutter py-4 space-y-1" id="mobileMenu">
+<a class="block py-3 text-white/90 font-label-md text-label-md border-b border-white/10" href="#services">Diensten</a>
+<a class="block py-3 text-white/90 font-label-md text-label-md border-b border-white/10" href="#voor-wie">Voor wie</a>
+<a class="block py-3 text-white/90 font-label-md text-label-md border-b border-white/10" href="#werkwijze">Hoe het werkt</a>
+<a class="block py-3 text-white/90 font-label-md text-label-md border-b border-white/10" href="#projects">Projecten</a>
+<a class="block py-3 text-white/90 font-label-md text-label-md border-b border-white/10" href="#reviews">Reviews</a>
+<a class="block py-3 text-white/90 font-label-md text-label-md" href="#faq">Vragen</a>
+</div>
+</nav>
+<main>
+<!-- Immersive Hero Section -->
+<section class="relative min-h-[90vh] flex items-center pt-16 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Glanzende epoxyvloer gemaakt door Rifgroup N.V. in Paramaribo" class="w-full h-full object-cover scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGMfx42YbTxPXjsxJKnxMvQqh1r-gZriabCWsIUBSNGwzSx7EgJA7bLs_lW32MRLJWFJUd249RXDufGwM1jvlXu7-Wwfpo1697dmSqfK3RSLstWVIZHHuX8IdkjT5VAjamrTvvoCgr3TZb4p78Kzw7rnLjfwnKCa8h2KWwxoJsh4a-TUtAATVwguWbqi4sJHKlSU8_VpIPtpaxmZhpz4slvDzH_MjvcoZTpRDXGIVSXJcFAjrR9KC7"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/70 to-transparent"></div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10 w-full">
+<div class="max-w-3xl space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+<span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed text-[16px]">verified</span>
+<span class="font-label-md text-[12px] text-white">Epoxyvloeren en schilderwerk in Paramaribo, Suriname</span>
+</div>
+<h1 class="text-[44px] md:text-[72px] text-white leading-[1.05] font-bold text-balance tracking-tight">
+                    Een vloer die <span class="text-secondary-fixed italic">jaren mooi blijft</span>.
+                </h1>
+<p class="text-body-lg text-white/90 max-w-xl">
+                    Rifgroup N.V. maakt epoxy vloeren, schildert huizen en gebouwen, en maakt oude daken weer nieuw. U krijgt een plek die er goed uitziet, makkelijk schoonmaakt en lang meegaat.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="px-10 py-4 bg-secondary text-on-secondary rounded-lg font-label-md text-label-md shadow-ambient gloss-effect hover:-translate-y-1 transition-all" href="#quote">
+                        Vraag een prijs via WhatsApp
+                    </a>
+<a class="px-10 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white rounded-lg font-label-md text-label-md hover:bg-white/20 transition-all" href="#services">
+                        Bekijk onze diensten
+                    </a>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-gutter right-gutter z-10 hidden md:flex justify-between items-end">
+<div class="max-w-xs p-5 bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl">
+<p class="text-white/90 text-body-md leading-snug">Elke vloer maken wij op maat. U kiest de kleur en het ontwerp, wij doen de rest.</p>
+</div>
+<div class="hidden md:flex flex-col items-center gap-4">
+<span class="text-white/40 font-label-md tracking-widest text-[10px]">SCROLL</span>
+<div class="w-1 h-12 bg-white/20 rounded-full overflow-hidden">
+<div class="h-1/3 bg-secondary"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Breadcrumbs -->
+<nav aria-label="Kruimelpad" class="bg-surface-container-low border-b border-outline-variant/40">
+<ol class="max-w-container-max mx-auto px-gutter py-3 flex flex-wrap items-center gap-2 text-[13px] text-on-surface-variant">
+<li><a class="hover:text-secondary font-medium" href="#">Home</a></li>
+<li aria-hidden="true">›</li>
+<li><a class="hover:text-secondary" href="#services">Diensten</a></li>
+<li aria-hidden="true">›</li>
+<li><a class="hover:text-secondary" href="#voor-wie">Voor wie</a></li>
+<li aria-hidden="true">›</li>
+<li><a class="hover:text-secondary" href="#werkwijze">Hoe het werkt</a></li>
+<li aria-hidden="true">›</li>
+<li><a class="hover:text-secondary" href="#projects">Projecten</a></li>
+<li aria-hidden="true">›</li>
+<li><a class="hover:text-secondary" href="#reviews">Reviews</a></li>
+<li aria-hidden="true">›</li>
+<li><a class="hover:text-secondary" href="#quote">Prijs vragen</a></li>
+</ol>
+</nav>
+<!-- Services Intro -->
+<section class="pt-24 pb-12 bg-surface" id="services">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="max-w-3xl">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block mb-3">Onze diensten</span>
+<h2 class="text-[36px] md:text-[48px] text-primary font-bold text-balance">Zes diensten. Eén team. Eén aanspreekpunt.</h2>
+<p class="text-body-lg text-on-surface-variant mt-4">Van vloer tot dak: dit is wat Rifgroup N.V. doet in Paramaribo en omgeving. Elke dienst heeft zijn eigen stuk hieronder. Klik en spring er direct naartoe.</p>
+</div>
+<nav aria-label="Ga direct naar een dienst" class="flex flex-wrap gap-2 mt-8">
+<a class="px-5 py-2 rounded-full border border-outline-variant text-on-surface-variant text-[13px] font-medium hover:border-secondary hover:text-secondary transition-colors" href="#dienst-epoxy">01 · Epoxyvloeren</a>
+<a class="px-5 py-2 rounded-full border border-outline-variant text-on-surface-variant text-[13px] font-medium hover:border-secondary hover:text-secondary transition-colors" href="#dienst-marmer">02 · Marmer epoxy</a>
+<a class="px-5 py-2 rounded-full border border-outline-variant text-on-surface-variant text-[13px] font-medium hover:border-secondary hover:text-secondary transition-colors" href="#dienst-schilderwerk">03 · Schilderwerk</a>
+<a class="px-5 py-2 rounded-full border border-outline-variant text-on-surface-variant text-[13px] font-medium hover:border-secondary hover:text-secondary transition-colors" href="#dienst-dak">04 · Dakspuiten</a>
+<a class="px-5 py-2 rounded-full border border-outline-variant text-on-surface-variant text-[13px] font-medium hover:border-secondary hover:text-secondary transition-colors" href="#dienst-plafond">05 · Plafond &amp; drywall</a>
+<a class="px-5 py-2 rounded-full border border-outline-variant text-on-surface-variant text-[13px] font-medium hover:border-secondary hover:text-secondary transition-colors" href="#dienst-projecten">06 · Complete projecten</a>
+</nav>
+</div>
+</section>
+<!-- 01 Epoxyvloeren -->
+<section class="py-16 bg-surface" id="dienst-epoxy">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+<div class="relative rounded-xl overflow-hidden shadow-ambient aspect-[4/3]">
+<img alt="Flakes epoxyvloer met kleurdeeltjes in een garage" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiipHXmIs_jpRmyGsrABuFFUvlpGO0C9DMDBsqojoyKEWrwc1NCitHd5G7AqkfmsodLjDiLNfH22JZucFX45GlnxQaS-_UnJDQpQwHpwjJU9n15Deh90q9B1JTf5LBGMRTQFY-MoAMQjBT3Zsck_ahLt8Wb_O4lYLqmJYqA56fqawq4U504C9AgQ0HuuC4hMPreJvWRHfwWoRb_P6-b6GsLUIGFiex_RqCrQsPcY1_Swk9sMkntVl4"/>
+</div>
+<div class="space-y-5">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block">Dienst 01</span>
+<h2 class="text-headline-lg text-primary">Epoxyvloeren: effen &amp; flakes</h2>
+<p class="text-body-lg text-on-surface-variant">Een sterke, naadloze laag over uw betonvloer. Effen in één kleur, of met flakes: kleine kleurdeeltjes die de vloer modern en glanzend maken. De vloer is vloeistofdicht en kan tegen een stootje.</p>
+<p class="text-body-md text-primary"><strong class="text-secondary">Wat u krijgt:</strong> een gladde vloer die u in vijf minuten schoonmaakt en die jaren meegaat.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1 rounded-full border border-outline-variant text-on-surface-variant text-[13px]">Woningen</span>
+<span class="px-4 py-1 rounded-full border border-outline-variant text-on-surface-variant text-[13px]">Garages</span>
+<span class="px-4 py-1 rounded-full border border-outline-variant text-on-surface-variant text-[13px]">Winkels</span>
+<span class="px-4 py-1 rounded-full border border-outline-variant text-on-surface-variant text-[13px]">Kantoren</span>
+<span class="px-4 py-1 rounded-full border border-outline-variant text-on-surface-variant text-[13px]">Showrooms</span>
+</div>
+<a class="inline-flex items-center gap-2 bg-secondary text-on-secondary px-6 py-3 mt-2 rounded-lg font-label-md text-label-md shadow-ambient gloss-effect hover:brightness-110 active:scale-95 transition-all" data-service="Epoxyvloer (flakes)" href="#quote"><span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">chat</span>Vraag een prijs voor deze vloer</a>
+</div>
+</div>
+</section>
+<!-- 02 Marmer epoxy -->
+<section class="py-16 bg-surface-container-low" id="dienst-marmer">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+<div class="relative rounded-xl overflow-hidden shadow-ambient aspect-[4/3] md:order-2">
+<img alt="Luxe marmer epoxyvloer in een woonkamer" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlbVTxKPdjNi_iTwv-kxEuEIXUB44azNaduusIyiv3lTNrvGd50D2vcpnC2iSNgpGfxpnwSuJaCIVYyegWzGAwjC7eJooDGPtiIYC1CsK5OlYtyaxxfRLBM4D5QCd_HXvektWHnuzdh2u4ZoqWrCDrXhGITv10QicLR5QzgGyY-BdmKEEC4yWflBYHdOs0QBA0MD5zIPWcTKaanJJL3pRBuIl5R367Z0VC-GtMEyyso4eg3d-4UlMf"/>
+</div>
+<div class="space-y-5 md:order-1">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block">Dienst 02</span>
+<h2 class="text-headline-lg text-primary">Marmer epoxy</h2>
+<p class="text-body-lg text-on-surface-variant">Zachte, vloeiende lijnen zoals echt marmer, maar zonder naden of tegels. U kiest de kleuren, wij maken een ontwerp dat nergens anders bestaat. Elke marmer epoxyvloer is er maar één keer.</p>
+<p class="text-body-md text-primary"><strong class="text-secondary">Wat u krijgt:</strong> een luxe uitstraling waar bezoekers over beginnen.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1 rounded-full bg-secondary text-on-secondary font-bold text-[13px]">Uniek ontwerp</span>
+<span class="px-4 py-1 rounded-full border border-outline-variant text-on-surface-variant text-[13px]">Woonkamers</span>
+<span class="px-4 py-1 rounded-full border border-outline-variant text-on-surface-variant text-[13px]">Winkels</span>
+<span class="px-4 py-1 rounded-full border border-outline-variant text-on-surface-variant text-[13px]">Horeca</span>
+</div>
+<a class="inline-flex items-center gap-2 bg-secondary text-on-secondary px-6 py-3 mt-2 rounded-lg font-label-md text-label-md shadow-ambient gloss-effect hover:brightness-110 active:scale-95 transition-all" data-service="Marmer epoxy" href="#quote"><span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">chat</span>Vraag een prijs voor deze vloer</a>
+</div>
+</div>
+</section>
+<!-- 03 Schilderwerk -->
+<section class="py-16 bg-surface" id="dienst-schilderwerk">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+<div class="relative rounded-xl overflow-hidden shadow-ambient aspect-[4/3]">
+<img alt="Strak binnenschilderwerk met professioneel spuitwerk" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV24PWiNuixhJlSNy_Xz4y5RqBYt3kQ0to1vTo4PJ7lH2Lqnkhf-CqrfN0kyWUg7d6Rl-EMMK8PqryNw3GfrdZzXX5I-0knEeMmhSU_2lJjdrYj-0jfD0uzY913xfC-fGADC1IwdKrMSksvLsv_b8QeXnE0q1Z_lfj5PkYBQPEgtG_YPWi_HzQ78QuLrPKHxOUWJdH0_4mPds9nDT8ZlfGUK4G4swANURSNqZrZFZO7jK9w761ZIMg"/>
+</div>
+<div class="space-y-5">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block">Dienst 03</span>
+<h2 class="text-headline-lg text-primary">Schilderwerk: binnen &amp; buiten</h2>
+<p class="text-body-lg text-on-surface-variant">Woonkamers, slaapkamers, kantoren, muren, plafonds en hele gebouwen. Grote vlakken spuiten wij met airless spuitmachines: sneller klaar en strakker dan met de kwast. Goed voorwerk hoort er altijd bij: gaatjes vullen, schuren en primer.</p>
+<p class="text-body-md text-on-surface-variant">Iets bijzonders willen? Wij maken ook decoratief spuitwerk en accentmuren. <em>Coloring your imagination.</em></p>
+<p class="text-body-md text-primary"><strong class="text-secondary">Wat u krijgt:</strong> een huis of zaak die er weer fris en nieuw uitziet.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1 rounded-full border border-outline-variant text-on-surface-variant text-[13px]">Binnen</span>
+<span class="px-4 py-1 rounded-full border border-outline-variant text-on-surface-variant text-[13px]">Buiten</span>
+<span class="px-4 py-1 rounded-full border border-outline-variant text-on-surface-variant text-[13px]">Airless spuitwerk</span>
+<span class="px-4 py-1 rounded-full border border-outline-variant text-on-surface-variant text-[13px]">Decoratief</span>
+</div>
+<a class="inline-flex items-center gap-2 bg-secondary text-on-secondary px-6 py-3 mt-2 rounded-lg font-label-md text-label-md shadow-ambient gloss-effect hover:brightness-110 active:scale-95 transition-all" data-service="Binnen schilderwerk" href="#quote"><span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">chat</span>Vraag een prijs voor schilderwerk</a>
+</div>
+</div>
+</section>
+<!-- 04 Dakspuiten -->
+<section class="py-16 bg-surface-container-low" id="dienst-dak">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+<div class="relative rounded-xl overflow-hidden shadow-ambient aspect-[4/3] md:order-2">
+<img alt="Dak met nieuwe beschermende coating" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvQBz62AIN3e7JJgUDiUnSNvApTK7fzG68waM5KgfNvv3agDid8NJaKYKOUP79G7SMJsvrftymP8kk1AEeWj6QqVPBosf3a0_W-uFSmRmsH9wInZhgio9O7L2jN99oLzRz2uCpvMBllWUee8JhT7BHRfNrdFmBYvG1O2PyP5AXtyoAcal0R-enc3eXxwPtcwK2ZsQZckwN04goMkFmIo11EJl9va-Drw76mq8ocwK4KLBEpzz_Gcgq"/>
+</div>
+<div class="space-y-5 md:order-1">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block">Dienst 04</span>
+<h2 class="text-headline-lg text-primary">Dakspuiten &amp; dakcoating</h2>
+<p class="text-body-lg text-on-surface-variant">Is uw dak verkleurd, verweerd of roestig? Wij spuiten het met een airless spuitmachine weer strak in de kleur die u wilt.</p>
+<p class="text-body-md text-on-surface-variant">Handig: app een <strong>foto van uw dak</strong> plus de <strong>lengte en breedte</strong>, en u krijgt al een eerste inschatting voordat wij langskomen.</p>
+<p class="text-body-md text-primary"><strong class="text-secondary">Wat u krijgt:</strong> een dak dat weer nieuw oogt en beschermd is tegen zon en roest.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1 rounded-full border border-outline-variant text-on-surface-variant text-[13px]">Verkleurde daken</span>
+<span class="px-4 py-1 rounded-full border border-outline-variant text-on-surface-variant text-[13px]">Roestige daken</span>
+<span class="px-4 py-1 rounded-full border border-outline-variant text-on-surface-variant text-[13px]">Airless</span>
+</div>
+<a class="inline-flex items-center gap-2 bg-secondary text-on-secondary px-6 py-3 mt-2 rounded-lg font-label-md text-label-md shadow-ambient gloss-effect hover:brightness-110 active:scale-95 transition-all" data-service="Dakspuiten / dakschilderen" href="#quote"><span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">chat</span>Vraag een prijs voor uw dak</a>
+</div>
+</div>
+</section>
+<!-- 05 Plafond & drywall -->
+<section class="py-16 bg-surface" id="dienst-plafond">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+<div class="space-y-5">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block">Dienst 05</span>
+<h2 class="text-headline-lg text-primary">Plafond- &amp; drywall-afwerking</h2>
+<p class="text-body-lg text-on-surface-variant">Van ruw naar strak. Wij werken plafonds en drywall-wanden helemaal af, met professionele schuurmachines voor een glad resultaat. Zo werkten wij ook het complete plafond van een ballroom af — groot of klein, de aanpak is even netjes.</p>
+<p class="text-body-md text-primary"><strong class="text-secondary">Wat u krijgt:</strong> gladde plafonds en wanden zonder bobbels of naden, klaar voor verf.</p>
+<a class="inline-flex items-center gap-2 bg-secondary text-on-secondary px-6 py-3 mt-2 rounded-lg font-label-md text-label-md shadow-ambient gloss-effect hover:brightness-110 active:scale-95 transition-all" data-service="Plafondafwerking" href="#quote"><span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">chat</span>Vraag een prijs voor afwerking</a>
+</div>
+<div class="bg-surface-container rounded-xl border border-outline-variant/30 p-8 md:p-10">
+<h3 class="font-display text-[18px] font-bold text-primary mb-6">Zo maken wij het glad</h3>
+<ol class="space-y-4">
+<li class="flex gap-4 items-start"><span class="w-8 h-8 shrink-0 bg-secondary text-white rounded-full flex items-center justify-center font-display font-bold text-[14px]">1</span><p class="text-body-md text-on-surface-variant"><strong class="text-primary">Mudding</strong> — naden en oneffenheden vullen wij met plamuur.</p></li>
+<li class="flex gap-4 items-start"><span class="w-8 h-8 shrink-0 bg-secondary text-white rounded-full flex items-center justify-center font-display font-bold text-[14px]">2</span><p class="text-body-md text-on-surface-variant"><strong class="text-primary">Machinaal schuren</strong> — alles wordt glad geschuurd, ook plafonds.</p></li>
+<li class="flex gap-4 items-start"><span class="w-8 h-8 shrink-0 bg-secondary text-white rounded-full flex items-center justify-center font-display font-bold text-[14px]">3</span><p class="text-body-md text-on-surface-variant"><strong class="text-primary">Egaliseren</strong> — het hele vlak wordt recht en effen gemaakt.</p></li>
+<li class="flex gap-4 items-start"><span class="w-8 h-8 shrink-0 bg-secondary text-white rounded-full flex items-center justify-center font-display font-bold text-[14px]">4</span><p class="text-body-md text-on-surface-variant"><strong class="text-primary">Primer &amp; verf</strong> — de laatste laag voor een strak eindresultaat.</p></li>
+</ol>
+</div>
+</div>
+</section>
+<!-- 06 Complete projecten -->
+<section class="py-16 bg-primary" id="dienst-projecten">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+<div class="space-y-5">
+<span class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest block">Dienst 06</span>
+<h2 class="text-headline-lg text-white">Complete projecten</h2>
+<p class="text-body-lg text-white/80">Renovatie of groot project? U hoeft geen drie bedrijven te bellen. Eén team van Rifgroup doet het voorwerk, de vloer, de wanden en de verf. Wij werken ook als onderaannemer voor aannemers en ontwikkelaars.</p>
+<p class="text-body-md text-white"><strong class="text-secondary-fixed">Wat u krijgt:</strong> één aanspreekpunt van begin tot eind, en een afgewerkt resultaat.</p>
+<a class="inline-flex items-center gap-2 bg-secondary text-on-secondary px-6 py-3 mt-2 rounded-lg font-label-md text-label-md shadow-ambient gloss-effect hover:brightness-110 active:scale-95 transition-all" data-service="Compleet project" href="#quote"><span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">chat</span>Vraag een prijs voor uw project</a>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-xl p-8 md:p-10">
+<h3 class="font-display text-[18px] font-bold text-white mb-6">Eén team regelt:</h3>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-white/90 text-body-md"><span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed">check_circle</span> Voorbereiding: schuren, mudding, egaliseren</li>
+<li class="flex items-center gap-3 text-white/90 text-body-md"><span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed">check_circle</span> Epoxyvloeren: effen, flakes of marmer</li>
+<li class="flex items-center gap-3 text-white/90 text-body-md"><span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed">check_circle</span> Wanden en plafonds: drywall-afwerking</li>
+<li class="flex items-center gap-3 text-white/90 text-body-md"><span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed">check_circle</span> Verf- en spuitwerk: binnen en buiten</li>
+<li class="flex items-center gap-3 text-white/90 text-body-md"><span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed">check_circle</span> Dak: spuiten en coating</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Voor wie -->
+<section class="py-20 bg-surface-container" id="voor-wie">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-14 max-w-2xl mx-auto space-y-3">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block">Voor wie</span>
+<h2 class="text-headline-lg text-primary">Wij werken voor heel Paramaribo</h2>
+<p class="text-body-md text-on-surface-variant">Klein of groot, huis of bedrijf: dit zijn de mensen die ons bellen.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="space-y-4 p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/20">
+<div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center rounded-lg"><span aria-hidden="true" class="material-symbols-outlined text-[26px]">home</span></div>
+<h3 class="text-headline-md text-primary text-[20px]">Huiseigenaren</h3>
+<p class="text-body-md text-on-surface-variant">Een nieuwe epoxyvloer in de garage, de woonkamer geschilderd, of het dak weer als nieuw — ook fijn vóór een verhuizing of verkoop.</p>
+</div>
+<div class="space-y-4 p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/20">
+<div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center rounded-lg"><span aria-hidden="true" class="material-symbols-outlined text-[26px]">storefront</span></div>
+<h3 class="text-headline-md text-primary text-[20px]">Bedrijven &amp; winkels</h3>
+<p class="text-body-md text-on-surface-variant">Kantoren, winkels, showrooms, restaurants en salons die een sterke, makkelijk schoon te maken vloer en een nette uitstraling willen.</p>
+</div>
+<div class="space-y-4 p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/20">
+<div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center rounded-lg"><span aria-hidden="true" class="material-symbols-outlined text-[26px]">engineering</span></div>
+<h3 class="text-headline-md text-primary text-[20px]">Aannemers &amp; ontwikkelaars</h3>
+<p class="text-body-md text-on-surface-variant">Wij springen bij als afwerkingspartner: spuitwerk, drywall-afwerking, plafonds en epoxyvloeren binnen uw bouwproject.</p>
+</div>
+<div class="space-y-4 p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/20">
+<div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center rounded-lg"><span aria-hidden="true" class="material-symbols-outlined text-[26px]">apartment</span></div>
+<h3 class="text-headline-md text-primary text-[20px]">Verhuurders &amp; beheerders</h3>
+<p class="text-body-md text-on-surface-variant">Opfrisverf tussen huurders, dakonderhoud en vloeren die tegen dagelijks gebruik kunnen — zodat uw pand zijn waarde houdt.</p>
+</div>
+</div>
+<p class="text-center mt-10 text-body-md text-on-surface-variant">Herkent u zich hierin? <a class="text-secondary font-bold hover:underline" href="#quote">Vraag een prijs aan</a> of bekijk eerst <a class="text-secondary font-bold hover:underline" href="#werkwijze">hoe het werkt</a>.</p>
+</div>
+</section>
+<!-- Hoe het werkt -->
+<section class="py-20 bg-surface-container-low" id="werkwijze">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-14 max-w-2xl mx-auto space-y-3">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block">Hoe het werkt</span>
+<h2 class="text-headline-lg text-primary">In 3 stappen naar een mooi resultaat</h2>
+<p class="text-body-md text-on-surface-variant">Zo makkelijk is het. Geen gedoe, geen verrassingen.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="space-y-4 p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/20 shadow-sm">
+<div class="w-12 h-12 bg-secondary text-white flex items-center justify-center rounded-full font-display font-bold text-[20px]">1</div>
+<h3 class="text-headline-md text-primary text-[20px]">Stuur alles in één bericht</h3>
+<p class="text-body-md text-on-surface-variant">Vul het formulier in of app ons direct. Stuur meteen foto's van de ruimte of het dak mee, plus de maten (ongeveer is goed genoeg). Alles in één keer — dan kunnen wij snel een goede prijs maken.</p>
+</div>
+<div class="space-y-4 p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/20 shadow-sm">
+<div class="w-12 h-12 bg-secondary text-white flex items-center justify-center rounded-full font-display font-bold text-[20px]">2</div>
+<h3 class="text-headline-md text-primary text-[20px]">U krijgt een prijs</h3>
+<p class="text-body-md text-on-surface-variant">Wij sturen een prijsvoorstel op maat. De prijs hangt af van de grootte, de ondergrond en het ontwerp.</p>
+</div>
+<div class="space-y-4 p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/20 shadow-sm">
+<div class="w-12 h-12 bg-secondary text-white flex items-center justify-center rounded-full font-display font-bold text-[20px]">3</div>
+<h3 class="text-headline-md text-primary text-[20px]">Wij doen het werk</h3>
+<p class="text-body-md text-on-surface-variant">Wij bereiden alles goed voor en werken netjes af. U geniet van het resultaat.</p>
+</div>
+</div>
+<p class="text-center mt-10 text-body-md text-on-surface-variant">Klaar voor stap 1? <a class="text-secondary font-bold hover:underline" href="#quote">Stuur nu uw bericht</a> — vragen kost niets.</p>
+</div>
+</section>
+<!-- Floating Project Gallery -->
+<section class="py-24 bg-surface" id="projects">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16 max-w-2xl mx-auto space-y-3">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block">Projecten</span>
+<h2 class="text-headline-lg text-primary">Kijk wat er mogelijk is</h2>
+<p class="text-body-md text-on-surface-variant">Van garagevloer tot woonkamer, van dak tot ballroom. Dit soort resultaten maken wij in Suriname.</p>
+</div>
+<div class="floating-grid">
+<!-- Item 1: Large Featured -->
+<div class="float-item-1 relative overflow-hidden rounded-2xl shadow-ambient group">
+<img alt="Sterke epoxyvloer in een grote werkruimte" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiipHXmIs_jpRmyGsrABuFFUvlpGO0C9DMDBsqojoyKEWrwc1NCitHd5G7AqkfmsodLjDiLNfH22JZucFX45GlnxQaS-_UnJDQpQwHpwjJU9n15Deh90q9B1JTf5LBGMRTQFY-MoAMQjBT3Zsck_ahLt8Wb_O4lYLqmJYqA56fqawq4U504C9AgQ0HuuC4hMPreJvWRHfwWoRb_P6-b6GsLUIGFiex_RqCrQsPcY1_Swk9sMkntVl4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+<p class="text-secondary-fixed font-bold text-[14px]">Epoxyvloer</p>
+<h3 class="text-white text-headline-md">Een vloer die hard werken aankan</h3>
+</div>
+</div>
+<!-- Item 2: Horizontal -->
+<div class="float-item-2 relative overflow-hidden rounded-2xl shadow-ambient group">
+<img alt="Marmer epoxy in een luxe woonkamer" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlbVTxKPdjNi_iTwv-kxEuEIXUB44azNaduusIyiv3lTNrvGd50D2vcpnC2iSNgpGfxpnwSuJaCIVYyegWzGAwjC7eJooDGPtiIYC1CsK5OlYtyaxxfRLBM4D5QCd_HXvektWHnuzdh2u4ZoqWrCDrXhGITv10QicLR5QzgGyY-BdmKEEC4yWflBYHdOs0QBA0MD5zIPWcTKaanJJL3pRBuIl5R367Z0VC-GtMEyyso4eg3d-4UlMf"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-6">
+<p class="text-secondary-fixed font-bold text-[13px]">Marmer epoxy</p>
+<h3 class="text-white text-[18px]">Luxe look in de woonkamer</h3>
+</div>
+</div>
+<!-- Item 3: Tall -->
+<div class="float-item-3 relative overflow-hidden rounded-2xl shadow-ambient group">
+<img alt="Strak binnenschilderwerk van muren en plafond" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV24PWiNuixhJlSNy_Xz4y5RqBYt3kQ0to1vTo4PJ7lH2Lqnkhf-CqrfN0kyWUg7d6Rl-EMMK8PqryNw3GfrdZzXX5I-0knEeMmhSU_2lJjdrYj-0jfD0uzY913xfC-fGADC1IwdKrMSksvLsv_b8QeXnE0q1Z_lfj5PkYBQPEgtG_YPWi_HzQ78QuLrPKHxOUWJdH0_4mPds9nDT8ZlfGUK4G4swANURSNqZrZFZO7jK9w761ZIMg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-6">
+<p class="text-secondary-fixed font-bold text-[13px]">Schilderwerk</p>
+<h3 class="text-white text-[18px]">Muren en plafonds weer fris</h3>
+</div>
+</div>
+<!-- Item 4: Bottom Banner -->
+<div class="float-item-4 relative overflow-hidden rounded-2xl shadow-ambient group">
+<img alt="Dak met nieuwe beschermende coating" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvQBz62AIN3e7JJgUDiUnSNvApTK7fzG68waM5KgfNvv3agDid8NJaKYKOUP79G7SMJsvrftymP8kk1AEeWj6QqVPBosf3a0_W-uFSmRmsH9wInZhgio9O7L2jN99oLzRz2uCpvMBllWUee8JhT7BHRfNrdFmBYvG1O2PyP5AXtyoAcal0R-enc3eXxwPtcwK2ZsQZckwN04goMkFmIo11EJl9va-Drw76mq8ocwK4KLBEpzz_Gcgq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+<p class="text-secondary-fixed font-bold text-[14px]">Dakspuiten</p>
+<h3 class="text-white text-[20px]">Een oud dak dat weer nieuw oogt</h3>
+</div>
+</div>
+</div>
+<p class="text-center mt-10 text-body-md text-on-surface-variant">Wilt u zo'n resultaat ook? <a class="text-secondary font-bold hover:underline" href="#quote">Vraag een prijs aan</a> of lees eerst wat <a class="text-secondary font-bold hover:underline" href="#reviews">klanten zeggen</a>.</p>
+</div>
+</section>
+<!-- Waarom Rifgroup -->
+<section aria-label="Waarom kiezen voor Rifgroup" class="py-16 bg-primary">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+<div class="space-y-3">
+<span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed text-[36px]">precision_manufacturing</span>
+<h3 class="text-white font-display font-bold text-[20px]">Professionele machines</h3>
+<p class="text-white/70 text-body-md max-w-xs mx-auto">Airless spuitmachines en schuurmachines. Sneller klaar, strakker resultaat dan handwerk alleen.</p>
+</div>
+<div class="space-y-3">
+<span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed text-[36px]">done_all</span>
+<h3 class="text-white font-display font-bold text-[20px]">Alles onder één dak</h3>
+<p class="text-white/70 text-body-md max-w-xs mx-auto">Van voorbereiding tot eindafwerking: vloer, wand, plafond en dak door hetzelfde team.</p>
+</div>
+<div class="space-y-3">
+<span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed text-[36px]">palette</span>
+<h3 class="text-white font-display font-bold text-[20px]">Gemaakt op maat</h3>
+<p class="text-white/70 text-body-md max-w-xs mx-auto">U kiest kleuren, flakes of marmer-look. Elk ontwerp wordt gemaakt voor uw ruimte.</p>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-20 bg-surface-container-low" id="reviews">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-14 max-w-2xl mx-auto space-y-3">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block">Reviews</span>
+<h2 class="text-headline-lg text-primary">Wat klanten zeggen</h2>
+</div>
+<!-- ponytail: placeholder quotes — swap for real, approved customer reviews from the owner before final launch -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<figure class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/20 shadow-sm space-y-4">
+<div aria-hidden="true" class="text-secondary text-[20px] tracking-widest">★★★★★</div>
+<blockquote class="text-body-md text-on-surface-variant">"Onze garagevloer is nu glad en glanzend. Schoonmaken gaat in vijf minuten. Hadden we dit maar eerder gedaan."</blockquote>
+<figcaption class="font-label-md text-label-md text-primary">Voorbeeldreview — Garagevloer, Paramaribo</figcaption>
+</figure>
+<figure class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/20 shadow-sm space-y-4">
+<div aria-hidden="true" class="text-secondary text-[20px] tracking-widest">★★★★★</div>
+<blockquote class="text-body-md text-on-surface-variant">"Ons dak was roestig en oud. Nu ziet het huis er van buiten weer als nieuw uit. Netjes gewerkt en goed opgeruimd."</blockquote>
+<figcaption class="font-label-md text-label-md text-primary">Voorbeeldreview — Dakspuiten, Wanica</figcaption>
+</figure>
+<figure class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/20 shadow-sm space-y-4">
+<div aria-hidden="true" class="text-secondary text-[20px] tracking-widest">★★★★★</div>
+<blockquote class="text-body-md text-on-surface-variant">"De marmer epoxyvloer in onze winkel krijgt elke week complimenten van klanten. Het ontwerp is precies wat wij wilden."</blockquote>
+<figcaption class="font-label-md text-label-md text-primary">Voorbeeldreview — Marmer epoxy, Paramaribo</figcaption>
+</figure>
+</div>
+<p class="text-center mt-8 text-[13px] text-on-surface-variant">Dit zijn voorbeeldreviews. Echte reacties van klanten worden hier binnenkort geplaatst.</p>
+</div>
+</section>
+<!-- High-Contrast Contact Panel -->
+<section class="py-20 bg-primary relative overflow-hidden" id="quote">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-secondary/5 -skew-x-12 translate-x-20"></div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="flex flex-col lg:flex-row gap-12 items-center">
+<div class="lg:w-1/2 space-y-6">
+<span class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest block">Gratis prijsvoorstel</span>
+<h2 class="text-[40px] md:text-[56px] text-white font-bold leading-tight">Weten wat het kost?<br/><span class="text-secondary-fixed italic">Vraag het gewoon.</span></h2>
+<p class="text-white/75 text-body-lg max-w-md">
+                        Vul het formulier in. Uw bericht opent in WhatsApp en wij reageren zo snel mogelijk. Vragen kost niets.
+                    </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-white/90 text-body-md"><span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed">check_circle</span> Prijs op maat voor uw ruimte</li>
+<li class="flex items-center gap-3 text-white/90 text-body-md"><span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed">check_circle</span> Foto's en maten meesturen mag meteen</li>
+<li class="flex items-center gap-3 text-white/90 text-body-md"><span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed">check_circle</span> Actief in Paramaribo en omliggende gebieden</li>
+</ul>
+</div>
+<div class="lg:w-1/2 w-full">
+<div class="bg-white rounded-2xl shadow-ambient p-8 relative overflow-hidden">
+<div class="mb-6">
+<h3 class="text-headline-md text-primary mb-1">Vraag een prijs aan</h3>
+<p class="text-body-md text-on-surface-variant">Snel geregeld via WhatsApp.</p>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-4" id="whatsappForm">
+<div>
+<label class="sr-only" for="f-name">Naam</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-secondary focus:ring-0 transition-all bg-surface-container-low" id="f-name" name="name" placeholder="Uw naam" required type="text"/>
+</div>
+<div>
+<label class="sr-only" for="f-phone">Telefoonnummer</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-secondary focus:ring-0 transition-all bg-surface-container-low" id="f-phone" name="phone" placeholder="Uw telefoonnummer" required type="tel"/>
+</div>
+<div>
+<label class="sr-only" for="f-service">Dienst</label>
+<select class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-secondary focus:ring-0 transition-all bg-surface-container-low" id="f-service" name="service">
+<option>Epoxyvloer (effen)</option>
+<option>Epoxyvloer (flakes)</option>
+<option>Marmer epoxy</option>
+<option>Binnen schilderwerk</option>
+<option>Buiten schilderwerk</option>
+<option>Dakspuiten / dakschilderen</option>
+<option>Plafondafwerking</option>
+<option>Drywall / wandafwerking</option>
+<option>Compleet project</option>
+</select>
+</div>
+<div>
+<label class="sr-only" for="f-location">Locatie of buurt</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-secondary focus:ring-0 transition-all bg-surface-container-low" id="f-location" name="location" placeholder="Locatie / buurt" type="text"/>
+</div>
+<div>
+<label class="sr-only" for="f-size">Grootte in vierkante meters</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-secondary focus:ring-0 transition-all bg-surface-container-low" id="f-size" name="size" placeholder="Ongeveer hoeveel m²?" type="text"/>
+</div>
+<div>
+<label class="sr-only" for="f-timing">Wanneer</label>
+<select class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-secondary focus:ring-0 transition-all bg-surface-container-low" id="f-timing" name="timing">
+<option>Zo snel mogelijk</option>
+<option>Binnen 2 weken</option>
+<option>Binnen 1 maand</option>
+<option>Ik wil eerst meer info</option>
+</select>
+</div>
+<div class="md:col-span-2">
+<label class="sr-only" for="f-details">Uw wensen</label>
+<textarea class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-secondary focus:ring-0 transition-all bg-surface-container-low" id="f-details" name="details" placeholder="Vertel kort wat u wilt laten doen." rows="3"></textarea>
+</div>
+<label class="md:col-span-2 flex items-start gap-3 text-[13px] text-on-surface-variant cursor-pointer">
+<input class="mt-0.5 rounded border-outline-variant text-secondary focus:ring-secondary" name="consent" required type="checkbox"/>
+<span>Ik geef Rifgroup N.V. toestemming om deze gegevens te gebruiken om contact met mij op te nemen over mijn aanvraag. Uw gegevens worden nergens anders voor gebruikt.</span>
+</label>
+<div class="md:col-span-2 pt-2">
+<button class="w-full py-4 bg-secondary text-white font-bold text-headline-md rounded-lg shadow-xl gloss-effect hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-3" type="submit">
+<span aria-hidden="true" class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                                    Open WhatsApp
+                                </button>
+<p class="text-center mt-3 text-[12px] text-on-surface-variant">Na het klikken opent WhatsApp met uw bericht — stuur daar meteen uw foto's en maten mee. Liever direct bellen of appen? <a class="text-secondary font-bold" href="https://wa.me/5978630295">+597 863-0295</a></p>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Accordion -->
+<section class="py-20 bg-surface" id="faq">
+<div class="max-w-3xl mx-auto px-gutter">
+<div class="text-center mb-10 space-y-3">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block">Vragen &amp; antwoorden</span>
+<h2 class="text-headline-lg text-primary">Veelgestelde vragen</h2>
+</div>
+<div class="flex flex-wrap justify-center gap-2 mb-8" role="group" aria-label="Filter vragen per onderwerp">
+<button class="faq-chip px-5 py-2 rounded-full border border-secondary bg-secondary text-on-secondary text-[13px] font-medium transition-all" data-cat="vloeren" type="button">Vloeren</button>
+<button class="faq-chip px-5 py-2 rounded-full border border-outline-variant text-on-surface-variant text-[13px] font-medium hover:border-secondary transition-all" data-cat="verf" type="button">Schilderwerk</button>
+<button class="faq-chip px-5 py-2 rounded-full border border-outline-variant text-on-surface-variant text-[13px] font-medium hover:border-secondary transition-all" data-cat="afwerking" type="button">Dak &amp; afwerking</button>
+<button class="faq-chip px-5 py-2 rounded-full border border-outline-variant text-on-surface-variant text-[13px] font-medium hover:border-secondary transition-all" data-cat="contact" type="button">Prijs &amp; contact</button>
+</div>
+<div class="space-y-4">
+<div class="faq-group space-y-4" id="group-vloeren">
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Wat is een epoxyvloer?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Een epoxyvloer is een sterke laag die over uw betonvloer wordt gegoten. De vloer wordt glad, zonder naden. Daardoor is hij makkelijk schoon te maken en gaat hij jaren mee.</div>
+</details>
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Hoe wordt een epoxyvloer gemaakt?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Eerst maken wij de vloer goed schoon en glad. Dan gieten wij de epoxy in de kleur of het ontwerp dat u koos, bijvoorbeeld flakes of marmer-look. Daarna moet de vloer een paar dagen drogen. Dan is hij klaar voor gebruik.</div>
+</details>
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Kan ik zelf kleuren en ontwerp kiezen?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Ja. Elke vloer maken wij op maat. U kiest de kleuren, de flakes of de marmer-look, en wij denken mee over wat het beste past bij uw ruimte.</div>
+</details>
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Hoe snel kan ik mijn nieuwe vloer gebruiken?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">De vloer moet eerst goed drogen en uitharden. Meestal kunt u er na een paar dagen weer op lopen. Wij vertellen u vooraf precies hoe lang uw vloer nodig heeft, zodat u kunt plannen.</div>
+</details>
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Hoe maak ik een epoxyvloer schoon?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Gewoon vegen en dweilen met water. Omdat de vloer geen naden heeft, kan vuil zich nergens verstoppen. U heeft geen speciale middelen nodig.</div>
+</details>
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Kan epoxy over mijn bestaande vloer?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Beton is de beste ondergrond. Wij kijken eerst hoe uw vloer erbij ligt en maken hem goed schoon, glad en droog voordat wij gieten. Stuur een foto van uw vloer, dan denken wij met u mee.</div>
+</details>
+</div>
+<div class="faq-group space-y-4 hidden" id="group-verf">
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Welk schilderwerk doen jullie?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Wij schilderen binnen en buiten: woonkamers, slaapkamers, muren, plafonds, kantoren en hele gebouwen. Voor grote vlakken gebruiken wij professionele spuitmachines. Dat werkt sneller en het resultaat is strakker.</div>
+</details>
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Bereiden jullie de muren ook voor?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Ja. Goed voorwerk is het geheim van mooi schilderwerk. Wij vullen gaatjes, schuren, maken glad en brengen primer aan voordat wij schilderen.</div>
+</details>
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Moet ik mijn meubels weghalen?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Dat hoeft meestal niet. Wij schuiven grote meubels naar het midden en dekken alles netjes af, zodat uw spullen schoon blijven. Bijzondere situaties spreken wij vooraf door.</div>
+</details>
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Moet ik zelf verf kopen?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Nee, dat hoeft niet. Wij adviseren over kleuren en verf, en spreken alles vooraf met u af in het prijsvoorstel. Zo weet u precies waar u aan toe bent.</div>
+</details>
+</div>
+<div class="faq-group space-y-4 hidden" id="group-afwerking">
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Mijn dak is oud en roestig. Kan dat weer mooi worden?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Ja. Wij spuiten daken met een airless spuitmachine. Een verkleurd of roestig dak ziet er daarna weer als nieuw uit. Stuur een foto van uw dak en de maten via WhatsApp, dan kunnen wij snel een inschatting geven.</div>
+</details>
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Doen jullie ook plafonds en drywall?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Ja. Wij werken plafonds en wanden strak af: mudding, schuren met machines, glad maken, primer en verf. Van ruw naar netjes afgewerkt.</div>
+</details>
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Welke maten moet ik doorgeven voor mijn dak?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">De lengte en de breedte van het dak zijn genoeg voor een eerste inschatting. Stuur die samen met een foto via WhatsApp, dan kunnen wij snel meedenken over de prijs.</div>
+</details>
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Plaatsen jullie ook nieuwe drywall-wanden?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Wij zijn sterk in het afwerken van drywall: naden behandelen, mudding, schuren en schilderen. Het plaatsen van nieuwe wanden bespreken wij graag per project — stuur uw vraag en wij kijken mee.</div>
+</details>
+</div>
+<div class="faq-group space-y-4 hidden" id="group-contact">
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Wat kost het?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Elke ruimte is anders, dus de prijs is op aanvraag. De prijs hangt af van de grootte (m²), de staat van de ondergrond, het ontwerp en de voorbereiding. Stuur uw gegevens via het formulier en u krijgt een prijs op maat.</div>
+</details>
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Waar werken jullie?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Wij zijn actief in Paramaribo en omliggende gebieden in Suriname. Projecten buiten Paramaribo zijn in overleg mogelijk.</div>
+</details>
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Hoe snel krijg ik antwoord?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Berichten via WhatsApp beantwoorden wij zo snel mogelijk. Hoe meer informatie u meestuurt (foto's, maten, locatie), hoe sneller wij een goede prijs kunnen geven.</div>
+</details>
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Kost het geld om een prijs te vragen?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Nee. Een bericht sturen en een prijsvoorstel vragen kost niets. U beslist daarna zelf of u het wilt laten doen.</div>
+</details>
+<details class="border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center py-2"><span class="text-[18px] text-primary font-bold font-display">Kan ik eerst voorbeelden van jullie werk zien?</span><span aria-hidden="true" class="material-symbols-outlined text-outline faq-chevron">expand_more</span></summary>
+<div class="mt-3 text-body-md text-on-surface-variant">Ja. Bekijk de <a class="text-secondary font-bold hover:underline" href="#projects">projecten op deze pagina</a> of kijk op onze Facebookpagina <strong>Rifgroup nv</strong> voor foto's en video's van echt werk.</div>
+</details>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-white border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter w-full px-gutter py-20 max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 space-y-5">
+<div class="flex items-center gap-3">
+<img alt="Logo van Rifgroup N.V." class="w-10 h-10 rounded-full object-cover border border-white/20" src="assets/rif-logo.jpg"/>
+<div class="font-display text-headline-md font-bold text-white">Rifgroup N.V.</div>
+</div>
+<p class="text-body-md opacity-60 leading-relaxed">
+                Schilder- en afwerkingsbedrijf in Paramaribo, Suriname. Gespecialiseerd in epoxyvloeren, flakes en marmer epoxy, spuit- en schilderwerk, dakcoating, plafond- en drywall-afwerking.
             </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#offerte">Ontvang prijsindicatie</a>
-              <a class="button button-secondary" href="#projecten">Bekijk demo projecten</a>
-            </div>
-            <ul class="hero-points">
-              <li>Meer structuur dan losse Facebook berichten</li>
-              <li>Duidelijke service uitleg voor minder herhaalvragen</li>
-              <li>WhatsApp formulier met naam, telefoon en projectinfo</li>
-            </ul>
-          </div>
+</div>
+<div class="space-y-5">
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-secondary-fixed">Diensten</h4>
+<ul class="space-y-2">
+<li><a class="text-body-md text-outline-variant hover:text-white transition-colors" href="#services">Epoxyvloeren &amp; flakes</a></li>
+<li><a class="text-body-md text-outline-variant hover:text-white transition-colors" href="#services">Marmer epoxy</a></li>
+<li><a class="text-body-md text-outline-variant hover:text-white transition-colors" href="#services">Schilderwerk</a></li>
+<li><a class="text-body-md text-outline-variant hover:text-white transition-colors" href="#services">Dakspuiten</a></li>
+<li><a class="text-body-md text-outline-variant hover:text-white transition-colors" href="#services">Plafond &amp; drywall</a></li>
+</ul>
+</div>
+<div class="space-y-5">
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-secondary-fixed">Informatie</h4>
+<ul class="space-y-2">
+<li><a class="text-body-md text-outline-variant hover:text-white transition-colors" href="#werkwijze">Hoe het werkt</a></li>
+<li><a class="text-body-md text-outline-variant hover:text-white transition-colors" href="#projects">Projecten</a></li>
+<li><a class="text-body-md text-outline-variant hover:text-white transition-colors" href="#reviews">Reviews</a></li>
+<li><a class="text-body-md text-outline-variant hover:text-white transition-colors" href="#faq">Veelgestelde vragen</a></li>
+</ul>
+</div>
+<div class="space-y-5">
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-secondary-fixed">Contact</h4>
+<div class="space-y-3 text-body-md text-outline-variant">
+<p class="flex items-center gap-2"><span aria-hidden="true" class="material-symbols-outlined text-[18px]">phone</span> <a class="hover:text-white" href="tel:+5978630295">+597 863-0295</a></p>
+<p class="flex items-center gap-2"><span aria-hidden="true" class="material-symbols-outlined text-[18px]">location_on</span> Paramaribo, Suriname</p>
+<p class="text-[14px]">Facebook: Rifgroup nv (Rifspraypaint)</p>
+<div class="pt-2 flex gap-4">
+<a aria-label="Stuur een WhatsApp bericht naar Rifgroup N.V." class="w-9 h-9 bg-secondary text-white flex items-center justify-center rounded-lg hover:scale-110 transition-transform" href="https://wa.me/5978630295">
+<span aria-hidden="true" class="material-symbols-outlined text-[20px]">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-6 border-t border-white/5 text-center">
+<p class="text-[11px] text-outline-variant opacity-50 uppercase tracking-widest">© 2026 Rifgroup N.V. — Paramaribo, Suriname. All rights reserved.</p>
+</div>
+</footer>
+<script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+        const open = mobileMenu.classList.toggle('hidden') === false;
+        menuBtn.setAttribute('aria-expanded', open);
+        menuBtn.setAttribute('aria-label', open ? 'Sluit menu' : 'Open menu');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+    }));
 
-          <div class="hero-visual">
-            <div class="hero-card hero-card-main">
-              <img src="assets/hero-floor.svg" alt="Decoratieve epoxy vloer illustratie">
-              <div class="hero-card-copy">
-                <p class="label">Populaire aanvraag</p>
-                <h2>Flakes epoxy en marble finish</h2>
-                <p>Sterke, onderhoudsvriendelijke vloeren die meteen een professionelere uitstraling geven.</p>
-              </div>
-            </div>
+    // FAQ category filter
+    document.querySelectorAll('.faq-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+            document.querySelectorAll('.faq-group').forEach(g => g.classList.add('hidden'));
+            document.getElementById(`group-${chip.dataset.cat}`).classList.remove('hidden');
+            document.querySelectorAll('.faq-chip').forEach(c => {
+                const active = c === chip;
+                c.classList.toggle('bg-secondary', active);
+                c.classList.toggle('text-on-secondary', active);
+                c.classList.toggle('border-secondary', active);
+                c.classList.toggle('text-on-surface-variant', !active);
+                c.classList.toggle('border-outline-variant', !active);
+            });
+        });
+    });
 
-            <div class="hero-card hero-card-note">
-              <p class="label">Waarom deze demo waarde heeft</p>
-              <p>
-                Een prospect hoeft niet meer te scrollen door oude posts. Alles staat op een logische pagina
-                met een duidelijke volgende stap.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+    // Service links pre-select the matching service in the quote form
+    document.querySelectorAll('a[data-service]').forEach(a => a.addEventListener('click', () => {
+        document.getElementById('f-service').value = a.dataset.service;
+    }));
 
-      <section class="proof-strip">
-        <div class="container proof-grid">
-          <article>
-            <strong>1 professionele pagina</strong>
-            <p>Handig om in elke chat, advertentie of Facebook reply te delen.</p>
-          </article>
-          <article>
-            <strong>Meer complete aanvragen</strong>
-            <p>De bezoeker stuurt niet alleen "prijs?" maar ook service, locatie en details mee.</p>
-          </article>
-          <article>
-            <strong>Basis voor automatisering</strong>
-            <p>Later uit te breiden met auto replies, reminders en follow-up flows.</p>
-          </article>
-        </div>
-      </section>
+    // Lead form -> WhatsApp (data leaves the page only with explicit consent, enforced by the required checkbox)
+    document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const f = new FormData(this);
+        const message =
+`Hallo Rifgroup N.V.,
 
-      <section id="diensten" class="section">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker">Diensten</p>
-              <h2>Alles wat een prospect in 60 seconden moet begrijpen.</h2>
-            </div>
-            <p>
-              Rifgroup positioneert zich hier niet als alleen een spray-paint bedrijf, maar als een partner
-              voor afwerking, coating en zichtbare upgrading van woningen en bedrijfsruimtes.
-            </p>
-          </div>
+Ik wil graag een prijs weten:
 
-          <div class="service-grid">
-            <article class="service-card">
-              <div class="service-icon">01</div>
-              <h3>Epoxy vloeren</h3>
-              <p>Flakes epoxy, marble epoxy en andere slijtvaste vloeroplossingen voor woningen, winkels en kantoren.</p>
-              <span>Perfect voor showrooms, woonkamers en commerciele ruimtes</span>
-            </article>
+*Naam:* ${f.get('name')}
+*Telefoon:* ${f.get('phone')}
+*Dienst:* ${f.get('service')}
+*Locatie:* ${f.get('location') || '-'}
+*Grootte:* ${f.get('size') || '-'}
+*Wanneer:* ${f.get('timing')}
+*Details:* ${f.get('details') || '-'}
 
-            <article class="service-card">
-              <div class="service-icon">02</div>
-              <h3>Binnen- en buitenschilderwerk</h3>
-              <p>Frisse, strakke verfafwerking voor muren, gevels, plafonds en complete panden.</p>
-              <span>Geschikt voor renovatie, oplevering en onderhoud</span>
-            </article>
+Foto's van de ruimte of het dak stuur ik direct hierna in deze chat.
 
-            <article class="service-card">
-              <div class="service-icon">03</div>
-              <h3>Dak spuiten en coating</h3>
-              <p>Voor daken die opnieuw beschermd en visueel opgefrist moeten worden.</p>
-              <span>Ideaal voor prijsindicaties op basis van foto en afmetingen</span>
-            </article>
+Ik geef toestemming om contact met mij op te nemen over deze aanvraag.`;
+        window.open(`https://wa.me/5978630295?text=${encodeURIComponent(message)}`, '_blank');
+    });
 
-            <article class="service-card">
-              <div class="service-icon">04</div>
-              <h3>Ceiling, drywall en sanding</h3>
-              <p>Voor een glad eindresultaat met nette voorbereiding en afwerking in elke ruimte.</p>
-              <span>Van reparatie tot volledige finishing</span>
-            </article>
-
-            <article class="service-card">
-              <div class="service-icon">05</div>
-              <h3>Decoratieve finishes</h3>
-              <p>Accentwanden, luxe texturen en marmerlook afwerkingen die een project meer karakter geven.</p>
-              <span>Voor klanten die iets opvallenders willen dan standaard verf</span>
-            </article>
-
-            <article class="service-card">
-              <div class="service-icon">06</div>
-              <h3>Algemeen aannemingswerk</h3>
-              <p>Extra uitvoeringswerk rondom afbouw en renovatie met een centraal aanspreekpunt.</p>
-              <span>Handig wanneer meerdere onderdelen samenkomen</span>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="waarde" class="section section-dark">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker">Business value</p>
-              <h2>Wat dit oplost voor Rifgroup.</h2>
-            </div>
-            <p>
-              Facebook leads zijn vaak verspreid, onvolledig of blijven liggen. Deze MVP maakt het veel
-              makkelijker om interesse om te zetten in een bruikbare aanvraag.
-            </p>
-          </div>
-
-          <div class="value-grid">
-            <article class="value-card">
-              <h3>Minder losse gesprekken</h3>
-              <p>Iedere prospect krijgt eerst dezelfde duidelijke uitleg, in plaats van losse antwoorden in DM of comments.</p>
-            </article>
-            <article class="value-card">
-              <h3>Betere lead kwaliteit</h3>
-              <p>Naam, telefoon, service, locatie en projectinfo worden al ingevuld voordat WhatsApp opent.</p>
-            </article>
-            <article class="value-card">
-              <h3>Meer vertrouwen</h3>
-              <p>Een professionele pagina laat direct zien dat Rifgroup meerdere diensten serieus aanbiedt.</p>
-            </article>
-            <article class="value-card">
-              <h3>Klaar voor opvolging</h3>
-              <p>Deze flow kan later gekoppeld worden aan automatische bevestigingen en herinneringen.</p>
-            </article>
-          </div>
-
-          <div class="process-panel">
-            <div>
-              <p class="section-kicker">Werkwijze</p>
-              <h3>Van bezoeker naar WhatsApp gesprek</h3>
-            </div>
-            <ol class="process-list">
-              <li>Bezoeker ziet direct welke diensten beschikbaar zijn.</li>
-              <li>Bezoeker kiest de juiste service en vult kerninformatie in.</li>
-              <li>De site zet die antwoorden om in een nette WhatsApp boodschap.</li>
-              <li>Rifgroup ontvangt een aanvraag die sneller op te volgen is.</li>
-            </ol>
-          </div>
-        </div>
-      </section>
-
-      <section id="projecten" class="section">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker">Project galerie</p>
-              <h2>Werk dat vertrouwen opbouwt voordat iemand appt.</h2>
-            </div>
-            <p>
-              Voor deze MVP zijn visuele placeholders gebruikt. In de definitieve versie kunnen hier Rifgroup's
-              eigen voor-en-na foto's, reels screenshots en projectdetails in komen.
-            </p>
-          </div>
-
-          <div class="gallery-grid">
-            <article class="gallery-card gallery-large">
-              <img src="assets/epoxy-flakes.svg" alt="Placeholder voor flakes epoxy project">
-              <div>
-                <p class="label">Epoxy vloer</p>
-                <h3>Flakes finish voor intensief gebruikte ruimtes</h3>
-              </div>
-            </article>
-
-            <article class="gallery-card">
-              <img src="assets/marble-finish.svg" alt="Placeholder voor marble epoxy project">
-              <div>
-                <p class="label">Decoratief</p>
-                <h3>Marble epoxy met luxe uitstraling</h3>
-              </div>
-            </article>
-
-            <article class="gallery-card">
-              <img src="assets/painting-project.svg" alt="Placeholder voor schilderwerk project">
-              <div>
-                <p class="label">Painting</p>
-                <h3>Binnen- en buitenschilderwerk</h3>
-              </div>
-            </article>
-
-            <article class="gallery-card">
-              <img src="assets/roof-coating.svg" alt="Placeholder voor dakcoating project">
-              <div>
-                <p class="label">Roof coating</p>
-                <h3>Snelle prijsindicatie op basis van foto en maat</h3>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="offerte" class="section quote-section">
-        <div class="container quote-grid">
-          <div class="quote-copy">
-            <p class="section-kicker">WhatsApp lead form</p>
-            <h2>Vraag in 1 minuut een prijsindicatie aan.</h2>
-            <p>
-              De bezoeker vult eerst de belangrijkste details in. Daarna opent WhatsApp met een complete,
-              nette aanvraag die direct verstuurd kan worden.
-            </p>
-            <ul class="quote-points">
-              <li>Naam en telefoon meteen in beeld</li>
-              <li>Dienst en locatie standaard meegestuurd</li>
-              <li>Ruimte voor afmetingen, foto's en wensen</li>
-            </ul>
-            <div class="note-card">
-              <p class="label">MVP note</p>
-              <p>
-                Automatische bevestigingen, follow-up reminders en CRM koppelingen zijn logische volgende stappen
-                na deze eerste demo.
-              </p>
-            </div>
-          </div>
-
-          <div class="quote-form-card">
-            <form id="quote-form">
-              <div class="field-grid">
-                <label class="field">
-                  <span>Naam</span>
-                  <input id="name" name="name" type="text" placeholder="Uw naam" required>
-                </label>
-
-                <label class="field">
-                  <span>Telefoonnummer</span>
-                  <input id="phone" name="phone" type="tel" placeholder="Bijv. 8xx-xxxx" required>
-                </label>
-
-                <label class="field">
-                  <span>Service</span>
-                  <select id="service" name="service">
-                    <option>Flakes epoxy vloer</option>
-                    <option>Marble epoxy vloer</option>
-                    <option>Binnen schilderwerk</option>
-                    <option>Buiten schilderwerk</option>
-                    <option>Dak spuiten of coating</option>
-                    <option>Ceiling of drywall</option>
-                    <option>Decoratieve finish</option>
-                    <option>Algemeen aannemingswerk</option>
-                  </select>
-                </label>
-
-                <label class="field">
-                  <span>Locatie</span>
-                  <input id="location" name="location" type="text" placeholder="Wijk of district">
-                </label>
-
-                <label class="field">
-                  <span>Type pand</span>
-                  <select id="property" name="property">
-                    <option>Woning</option>
-                    <option>Appartement</option>
-                    <option>Winkel</option>
-                    <option>Kantoor</option>
-                    <option>Bedrijfspand</option>
-                    <option>Anders</option>
-                  </select>
-                </label>
-
-                <label class="field">
-                  <span>Gewenste timing</span>
-                  <select id="timing" name="timing">
-                    <option>Zo snel mogelijk</option>
-                    <option>Binnen 2 weken</option>
-                    <option>Binnen 1 maand</option>
-                    <option>Ik wil eerst info</option>
-                  </select>
-                </label>
-
-                <label class="field field-full">
-                  <span>Projectinformatie</span>
-                  <textarea id="details" name="details" placeholder="Beschrijf kort de ruimte, afmetingen, gewenste kleur of afwerking."></textarea>
-                </label>
-
-                <label class="field field-full">
-                  <span>Wat moet Rifgroup zeker weten?</span>
-                  <textarea id="extra" name="extra" placeholder="Bijvoorbeeld huidige vloer, dakstaat, foto's beschikbaar of extra wensen."></textarea>
-                </label>
-              </div>
-
-              <button class="button button-primary button-block" type="submit">Maak WhatsApp aanvraag</button>
-              <p class="form-note">Na klikken opent WhatsApp met het bericht. De bezoeker verstuurt het daarna zelf.</p>
-              <p id="form-status" class="form-status" aria-live="polite"></p>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq" class="section">
-        <div class="container faq-wrap">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker">FAQ</p>
-              <h2>Vragen die normaal los in Facebook binnenkomen.</h2>
-            </div>
-            <p>
-              Deze sectie neemt al een deel van de repetitieve vragen weg, nog voordat iemand een bericht stuurt.
-            </p>
-          </div>
-
-          <div class="faq-list">
-            <details>
-              <summary>Hoe krijg ik snel een prijsindicatie?</summary>
-              <p>Stuur de gewenste dienst, locatie, geschatte afmetingen en indien mogelijk foto's mee. Deze site helpt om die informatie meteen goed te verzamelen.</p>
-            </details>
-            <details>
-              <summary>Kan Rifgroup zowel woningen als zakelijke projecten doen?</summary>
-              <p>Ja. De diensten zijn inzetbaar voor woningen, winkels, kantoren en andere projectlocaties.</p>
-            </details>
-            <details>
-              <summary>Kan ik kiezen tussen flakes epoxy en marble epoxy?</summary>
-              <p>Ja. Beide afwerkingen kunnen besproken worden op basis van uitstraling, gebruik en gewenste onderhoudsvriendelijkheid.</p>
-            </details>
-            <details>
-              <summary>Is deze website later uit te breiden?</summary>
-              <p>Ja. Denk aan echte projectfoto's, reviews, automatische antwoorden, remarketing en een uitgebreider opvolgsysteem.</p>
-            </details>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <a class="brand footer-brand" href="#top">
-            <img src="assets/badge-rif.svg" alt="Rifgroup badge">
-            <span>
-              <strong>Rif Epoxy Floors</strong>
-              <small>Demo website concept</small>
-            </span>
-          </a>
-          <p>
-            Deze MVP is bedoeld als eerste demo: professioneel genoeg om direct waarde te laten zien,
-            eenvoudig genoeg om snel te lanceren.
-          </p>
-        </div>
-
-        <div>
-          <p class="footer-title">Contact</p>
-          <a data-phone-link href="tel:+5978515500"><span data-phone-label>+597 851-5500</span></a>
-          <a href="tel:+5978630295">Extra lijn: +597 863-0295</a>
-          <p>Paramaribo, Suriname</p>
-        </div>
-
-        <div>
-          <p class="footer-title">Demo structuur</p>
-          <a href="#diensten">Services</a>
-          <a href="#projecten">Gallery</a>
-          <a href="#offerte">Quote form</a>
-          <a href="#faq">FAQ</a>
-        </div>
-      </div>
-
-      <div class="container footer-bottom">
-        <p>Demo concept for client presentation. Replace placeholder visuals with real project photos before final launch.</p>
-      </div>
-    </footer>
-
-    <a class="whatsapp-float" data-wa-link href="https://wa.me/5978515500?text=Hallo%20Rif%20Epoxy%20Floors%2C%20ik%20wil%20graag%20meer%20informatie." target="_blank" rel="noreferrer" aria-label="Open WhatsApp">
-      WhatsApp
-    </a>
-  </div>
-
-  <script src="script.js"></script>
+    // Solid nav on scroll
+    window.addEventListener('scroll', function() {
+        const nav = document.querySelector('nav.topnav');
+        nav.classList.toggle('bg-primary/95', window.scrollY > 40);
+        nav.classList.toggle('backdrop-blur-md', window.scrollY > 40);
+        nav.classList.toggle('shadow-xl', window.scrollY > 40);
+    });
+</script>
 </body>
 </html>

@@ -8,11 +8,12 @@ Netlify will publish the repository root as-is. A typical setup is:
 
 ```text
 /
-  index.html
-  styles.css
-  script.js
+  index.html   (self-contained: Tailwind CDN + inline JS, no separate CSS/JS needed)
   assets/
+  KNOWLEDGE.md (business knowledge base — read this first)
 ```
+
+Note: `styles.css`, `script.js` and the old SVG assets are leftovers from an earlier design and are no longer referenced by `index.html`. They can be deleted.
 
 ## GitHub -> Netlify setup
 
@@ -48,7 +49,7 @@ Review and replace these project-specific values:
 - Any placeholder domain names such as `example.com`
 - The production branch name if it is not `main`
 - Contact, legal, analytics, or form endpoints added in the site files
-- The WhatsApp number and business name in `script.js`
+- The WhatsApp number and business name in `index.html` (search for `5978630295`)
 - Any temporary preview or staging URLs shared during development
 
 ## Files in this setup
@@ -56,4 +57,4 @@ Review and replace these project-specific values:
 - `netlify.toml`: tells Netlify to publish the repo root with no build step
 - `.gitignore`: keeps local Netlify and OS clutter out of git
 - `README.md`: handoff notes for deployment and client-ready cleanup
-- `script.js`: central place for the WhatsApp destination and business name used by the form
+- `KNOWLEDGE.md`: central knowledge base about the business (services, contact, copy rules)
