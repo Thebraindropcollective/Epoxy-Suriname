@@ -47,6 +47,9 @@ We sell the **result**, not the labor. Copy pattern: service name + what life lo
 
 - Plain static site, no build step: `index.html` is self-contained (Tailwind CDN + inline JS). Deployed by Netlify from repo root (`netlify.toml`).
 - Logo: `assets/rif-logo.jpg`
+- `styles.css` / `script.js` in the repo root are unused leftovers from an earlier MVP build — not linked from `index.html`, safe to ignore or delete later.
+- `over-ons.html`, `projecten.html`, `contact.html` are standalone placeholder pages (not linked from `index.html`'s nav) representing the other 3 pages of the client's 4-page site proposal (Home + Over Ons + Projecten + Contact). Only Home (`index.html`) is fully built; the other three are short "binnenkort beschikbaar" stubs, built out only if the client chooses to continue past the homepage.
+- The former "owner proposal / pricing" section (id `voorstel`, pitch + SRD 15.000 price) has been removed from `index.html` — pricing is now handled via a separate proposal document sent directly to the owner, not embedded in the demo site.
 
 ## To confirm with the owner before "final" launch
 

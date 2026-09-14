@@ -148,9 +148,9 @@
         .float-item-3 { grid-column: 8 / span 5; grid-row: 2 / span 2; }
         .float-item-4 { grid-column: 1 / span 7; grid-row: 3 / span 1; }
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             .floating-grid { display: block; }
-            .floating-grid > div { margin-bottom: 20px; }
+            .floating-grid > div { margin-bottom: 20px; aspect-ratio: 4 / 3; }
         }
     </style>
 </head>
@@ -161,10 +161,10 @@
 <nav aria-label="Hoofdmenu" class="topnav sticky top-0 z-50 h-16 transition-all duration-500">
 <div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-full">
 <a class="flex items-center gap-2 md:gap-3 font-display text-[17px] md:text-[24px] font-bold text-white tracking-tight drop-shadow-md" href="#">
-<img alt="Logo van Rifgroup N.V." class="w-8 h-8 md:w-9 md:h-9 rounded-full object-cover border border-white/30" src="assets/rif-logo.jpg"/>
+<img alt="Logo van Rifgroup N.V." class="w-8 h-8 md:w-9 md:h-9 rounded-full object-cover border border-white/30 shrink-0" src="assets/rif-logo.jpg"/>
 Rifgroup N.V.
 </a>
-<div class="hidden md:flex gap-8 items-center">
+<div class="hidden lg:flex gap-8 items-center">
 <a class="font-label-md text-label-md text-white/90 hover:text-secondary transition-colors" href="#services">Diensten</a>
 <a class="font-label-md text-label-md text-white/90 hover:text-secondary transition-colors" href="#voor-wie">Voor wie</a>
 <a class="font-label-md text-label-md text-white/90 hover:text-secondary transition-colors" href="#werkwijze">Hoe het werkt</a>
@@ -172,16 +172,16 @@ Rifgroup N.V.
 <a class="font-label-md text-label-md text-white/90 hover:text-secondary transition-colors" href="#reviews">Reviews</a>
 <a class="font-label-md text-label-md text-white/90 hover:text-secondary transition-colors" href="#faq">Vragen</a>
 </div>
-<div class="flex items-center gap-3">
-<a class="bg-secondary text-on-secondary px-3 py-2 text-[12px] md:px-5 md:py-2.5 md:text-[14px] rounded font-label-md active:scale-95 transition-all duration-300 shadow-lg hover:brightness-110" href="#quote">
+<div class="flex items-center gap-2 md:gap-3">
+<a class="bg-secondary text-on-secondary px-2.5 py-2 text-[12px] md:px-5 md:py-2.5 md:text-[14px] rounded font-label-md active:scale-95 transition-all duration-300 shadow-lg hover:brightness-110" href="#quote">
             Vraag een prijs
         </a>
-<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu" class="md:hidden w-10 h-10 flex items-center justify-center text-white bg-white/10 rounded" id="menuBtn" type="button">
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu" class="lg:hidden w-10 h-10 flex items-center justify-center text-white bg-white/10 rounded shrink-0" id="menuBtn" type="button">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
 </div>
-<div class="hidden md:hidden bg-primary/95 backdrop-blur-md px-gutter py-4 space-y-1" id="mobileMenu">
+<div class="hidden lg:hidden bg-primary/95 backdrop-blur-md px-gutter py-4 space-y-1" id="mobileMenu">
 <a class="block py-3 text-white/90 font-label-md text-label-md border-b border-white/10" href="#services">Diensten</a>
 <a class="block py-3 text-white/90 font-label-md text-label-md border-b border-white/10" href="#voor-wie">Voor wie</a>
 <a class="block py-3 text-white/90 font-label-md text-label-md border-b border-white/10" href="#werkwijze">Hoe het werkt</a>
@@ -203,7 +203,7 @@ Rifgroup N.V.
 <span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed text-[16px]">verified</span>
 <span class="font-label-md text-[12px] text-white">Epoxyvloeren en schilderwerk in Paramaribo, Suriname</span>
 </div>
-<h1 class="text-[44px] md:text-[72px] text-white leading-[1.05] font-bold text-balance tracking-tight">
+<h1 class="text-[36px] sm:text-[44px] md:text-[72px] text-white leading-[1.05] font-bold text-balance tracking-tight">
                     Een vloer die <span class="text-secondary-fixed italic">jaren mooi blijft</span>.
                 </h1>
 <p class="text-body-lg text-white/90 max-w-xl">
@@ -233,7 +233,7 @@ Rifgroup N.V.
 </section>
 <!-- Breadcrumbs -->
 <nav aria-label="Kruimelpad" class="bg-surface-container-low border-b border-outline-variant/40">
-<ol class="max-w-container-max mx-auto px-gutter py-3 flex flex-wrap items-center gap-2 text-[13px] text-on-surface-variant">
+<ol class="max-w-container-max mx-auto px-gutter py-3 flex flex-nowrap sm:flex-wrap items-center gap-2 text-[13px] text-on-surface-variant overflow-x-auto sm:overflow-visible whitespace-nowrap sm:whitespace-normal [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
 <li><a class="hover:text-secondary font-medium" href="#">Home</a></li>
 <li aria-hidden="true">›</li>
 <li><a class="hover:text-secondary" href="#services">Diensten</a></li>
@@ -437,7 +437,7 @@ Rifgroup N.V.
 <h2 class="text-headline-lg text-primary">In 3 stappen naar een mooi resultaat</h2>
 <p class="text-body-md text-on-surface-variant">Zo makkelijk is het. Geen gedoe, geen verrassingen.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 <div class="space-y-4 p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/20 shadow-sm">
 <div class="w-12 h-12 bg-secondary text-white flex items-center justify-center rounded-full font-display font-bold text-[20px]">1</div>
 <h3 class="text-headline-md text-primary text-[20px]">Stuur alles in één bericht</h3>
@@ -530,7 +530,7 @@ Rifgroup N.V.
 <h2 class="text-headline-lg text-primary">Wat klanten zeggen</h2>
 </div>
 <!-- ponytail: placeholder quotes — swap for real, approved customer reviews from the owner before final launch -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 <figure class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/20 shadow-sm space-y-4">
 <div aria-hidden="true" class="text-secondary text-[20px] tracking-widest">★★★★★</div>
 <blockquote class="text-body-md text-on-surface-variant">"Onze garagevloer is nu glad en glanzend. Schoonmaken gaat in vijf minuten. Hadden we dit maar eerder gedaan."</blockquote>
@@ -557,7 +557,7 @@ Rifgroup N.V.
 <div class="flex flex-col lg:flex-row gap-12 items-center">
 <div class="lg:w-1/2 space-y-6">
 <span class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest block">Gratis prijsvoorstel</span>
-<h2 class="text-[40px] md:text-[56px] text-white font-bold leading-tight">Weten wat het kost?<br/><span class="text-secondary-fixed italic">Vraag het gewoon.</span></h2>
+<h2 class="text-[32px] sm:text-[40px] md:text-[56px] text-white font-bold leading-tight">Weten wat het kost?<br/><span class="text-secondary-fixed italic">Vraag het gewoon.</span></h2>
 <p class="text-white/75 text-body-lg max-w-md">
                         Vul het formulier in. Uw bericht opent in WhatsApp en wij reageren zo snel mogelijk. Vragen kost niets.
                     </p>
@@ -642,10 +642,10 @@ Rifgroup N.V.
 <h2 class="text-headline-lg text-primary">Veelgestelde vragen</h2>
 </div>
 <div class="flex flex-wrap justify-center gap-2 mb-8" role="group" aria-label="Filter vragen per onderwerp">
-<button class="faq-chip px-5 py-2 rounded-full border border-secondary bg-secondary text-on-secondary text-[13px] font-medium transition-all" data-cat="vloeren" type="button">Vloeren</button>
-<button class="faq-chip px-5 py-2 rounded-full border border-outline-variant text-on-surface-variant text-[13px] font-medium hover:border-secondary transition-all" data-cat="verf" type="button">Schilderwerk</button>
-<button class="faq-chip px-5 py-2 rounded-full border border-outline-variant text-on-surface-variant text-[13px] font-medium hover:border-secondary transition-all" data-cat="afwerking" type="button">Dak &amp; afwerking</button>
-<button class="faq-chip px-5 py-2 rounded-full border border-outline-variant text-on-surface-variant text-[13px] font-medium hover:border-secondary transition-all" data-cat="contact" type="button">Prijs &amp; contact</button>
+<button class="faq-chip px-5 py-2.5 rounded-full border border-secondary bg-secondary text-on-secondary text-[13px] font-medium transition-all" data-cat="vloeren" type="button">Vloeren</button>
+<button class="faq-chip px-5 py-2.5 rounded-full border border-outline-variant text-on-surface-variant text-[13px] font-medium hover:border-secondary transition-all" data-cat="verf" type="button">Schilderwerk</button>
+<button class="faq-chip px-5 py-2.5 rounded-full border border-outline-variant text-on-surface-variant text-[13px] font-medium hover:border-secondary transition-all" data-cat="afwerking" type="button">Dak &amp; afwerking</button>
+<button class="faq-chip px-5 py-2.5 rounded-full border border-outline-variant text-on-surface-variant text-[13px] font-medium hover:border-secondary transition-all" data-cat="contact" type="button">Prijs &amp; contact</button>
 </div>
 <div class="space-y-4">
 <div class="faq-group space-y-4" id="group-vloeren">
@@ -735,100 +735,10 @@ Rifgroup N.V.
 </div>
 </div>
 </section>
-<!-- ============ VOORSTEL VOOR DE EIGENAAR (verwijder deze sectie vóór livegang) ============ -->
-<section class="py-20 bg-primary relative overflow-hidden" id="voorstel">
-<div class="absolute top-0 left-0 w-1/3 h-full bg-secondary/5 skew-x-12 -translate-x-20"></div>
-<div class="max-w-container-max mx-auto px-gutter relative z-10">
-<div class="max-w-3xl mb-12">
-<span class="inline-block px-3 py-1 bg-secondary/20 border border-secondary/40 rounded-full font-label-md text-[12px] text-secondary-fixed uppercase tracking-widest mb-4">Voorstel voor de eigenaar van Rifgroup N.V.</span>
-<h2 class="text-[32px] md:text-[44px] text-white font-bold leading-tight">Ik lever u geen website. Ik lever u een sales-systeem.</h2>
-<p class="text-white/75 text-body-lg mt-4">Facebook brengt u tot een bepaald punt: berichten raken zoek, oude prijzen uit 2022 blijven rondzweven, en klanten sturen halve informatie. Deze website is uw digitale medewerker die <strong class="text-white">24 uur per dag</strong> uitlegt wat u doet, vertrouwen opbouwt en complete aanvragen binnenbrengt — ook wanneer u op een project staat en geen tijd heeft om te antwoorden.</p>
-<p class="text-white/75 text-body-lg mt-4">De website zelf is het gereedschap. Het systeem eromheen is waar het om gaat: <strong class="text-white">elke aanvraag komt binnen als data</strong> — naam, nummer, locatie, dienst en foto's, met toestemming van de klant. Zo bouwt de site <strong class="text-white">automatisch een klantenlijst</strong> voor u op. Die lijst is goud waard: voor offertes nu, en voor acties, promoties en terugkerende klanten later.</p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter mb-12">
-<!-- Price card -->
-<div class="bg-white rounded-2xl shadow-ambient p-6 md:p-8 flex flex-col">
-<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block mb-3">De prijs</span>
-<div class="flex items-end gap-2 mb-1"><span class="font-display text-[34px] sm:text-[44px] font-bold text-primary leading-none">SRD 15.000</span></div>
-<p class="text-on-surface-variant text-[14px] mb-6">≈ US$ 400 (koers ± SRD 37,5 per US$, juli 2026 — de dagkoers bij de cambio kan iets verschillen). Eenmalig bedrag.</p>
-<ul class="space-y-3 text-body-md text-on-surface-variant flex-grow">
-<li class="flex items-start gap-3"><span aria-hidden="true" class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span> Complete website, klaar om live te gaan</li>
-<li class="flex items-start gap-3"><span aria-hidden="true" class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span> <strong class="text-primary">1 maand gratis support</strong> voor eerste klanten: als iets stuk gaat of u wilt kleine dingen aanpassen</li>
-<li class="flex items-start gap-3"><span aria-hidden="true" class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span> Wij werken met een duidelijk contract — u weet precies wat u krijgt</li>
-<li class="flex items-start gap-3"><span aria-hidden="true" class="material-symbols-outlined text-outline text-[20px] mt-0.5">info</span> Hosting en domeinnaam betaalt u zelf (klein jaarlijks bedrag, op uw eigen naam — de site blijft altijd van ú)</li>
-</ul>
-<p class="text-[11px] text-outline mt-6">Prijs in overleg bespreekbaar.</p>
-</div>
-<!-- Features -->
-<div class="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
-<span class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest block mb-4">Wat zit erin</span>
-<ul class="space-y-3 text-body-md text-white/85">
-<li class="flex items-start gap-3"><span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed text-[20px] mt-0.5">check</span> 6 diensten, elk met een eigen sectie en eigen prijs-knop</li>
-<li class="flex items-start gap-3"><span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed text-[20px] mt-0.5">check</span> WhatsApp-formulier dat complete aanvragen oplevert: naam, dienst, locatie, m², planning én foto's — met toestemming van de klant</li>
-<li class="flex items-start gap-3"><span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed text-[20px] mt-0.5">check</span> Elke aanvraag bouwt mee aan uw klantenlijst — namen en nummers die u later kunt gebruiken voor acties en follow-ups</li>
-<li class="flex items-start gap-3"><span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed text-[20px] mt-0.5">check</span> 19 veelgestelde vragen beantwoord — vragen die u nu steeds zelf moet typen</li>
-<li class="flex items-start gap-3"><span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed text-[20px] mt-0.5">check</span> Reviewsectie, projectgalerij en "hoe het werkt" in 3 stappen</li>
-<li class="flex items-start gap-3"><span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed text-[20px] mt-0.5">check</span> Vindbaar op Google met lokale zoekwoorden (epoxy, Paramaribo, Suriname)</li>
-<li class="flex items-start gap-3"><span aria-hidden="true" class="material-symbols-outlined text-secondary-fixed text-[20px] mt-0.5">check</span> Werkt perfect op telefoon, tablet en computer — snel en licht, zonder maandelijkse licentiekosten</li>
-</ul>
-</div>
-<!-- Structure / why -->
-<div class="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
-<span class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest block mb-4">Zo is hij opgebouwd — en waarom</span>
-<ol class="space-y-3 text-body-md text-white/85">
-<li class="flex items-start gap-3"><span class="w-6 h-6 shrink-0 bg-secondary text-white rounded-full flex items-center justify-center font-display font-bold text-[12px] mt-0.5">1</span> <span><strong class="text-white">Hero:</strong> in 5 seconden duidelijk wat u doet en waar</span></li>
-<li class="flex items-start gap-3"><span class="w-6 h-6 shrink-0 bg-secondary text-white rounded-full flex items-center justify-center font-display font-bold text-[12px] mt-0.5">2</span> <span><strong class="text-white">Diensten &amp; voor wie:</strong> de klant herkent zijn eigen situatie</span></li>
-<li class="flex items-start gap-3"><span class="w-6 h-6 shrink-0 bg-secondary text-white rounded-full flex items-center justify-center font-display font-bold text-[12px] mt-0.5">3</span> <span><strong class="text-white">Stappen, projecten &amp; reviews:</strong> twijfel wordt vertrouwen</span></li>
-<li class="flex items-start gap-3"><span class="w-6 h-6 shrink-0 bg-secondary text-white rounded-full flex items-center justify-center font-display font-bold text-[12px] mt-0.5">4</span> <span><strong class="text-white">Formulier:</strong> het vertrouwen wordt een aanvraag in uw WhatsApp</span></li>
-<li class="flex items-start gap-3"><span class="w-6 h-6 shrink-0 bg-secondary text-white rounded-full flex items-center justify-center font-display font-bold text-[12px] mt-0.5">5</span> <span><strong class="text-white">FAQ:</strong> vangt de laatste vragen op, zodat u dat niet hoeft te doen</span></li>
-</ol>
-<p class="text-white/60 text-[13px] mt-5">Elke sectie duwt de bezoeker één stap verder: van "wie is dit?" naar "ik stuur een bericht".</p>
-</div>
-</div>
-<!-- Short/long term + pros/cons -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-<div class="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
-<span class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest block mb-4">Wat het u oplevert</span>
-<p class="text-white font-bold text-body-md mb-2">Direct (korte termijn):</p>
-<ul class="space-y-2 text-body-md text-white/85 mb-5">
-<li>• Een professionele eerste indruk — u bent geen "Facebook-schilder" meer, maar een bedrijf</li>
-<li>• Aanvragen komen compleet binnen: minder heen-en-weer appen, sneller een offerte</li>
-<li>• Eén link die u onder elke Facebook-post en in elke chat kunt delen</li>
-</ul>
-<p class="text-white font-bold text-body-md mb-2">Op de lange termijn:</p>
-<ul class="space-y-2 text-body-md text-white/85">
-<li>• Klanten vinden u via Google, ook mensen die u nu mist</li>
-<li>• De site beantwoordt vragen en bouwt vertrouwen op terwijl u werkt — uw tijd blijft voor de projecten</li>
-<li>• Oude prijzen uit 2022 verliezen hun kracht: úw site toont het actuele verhaal</li>
-<li>• Een basis die kan meegroeien: echte projectfoto's, meer pagina's, meer diensten</li>
-</ul>
-</div>
-<div class="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
-<span class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest block mb-4">Eerlijk: de plus- en minpunten</span>
-<p class="text-white font-bold text-body-md mb-2">Pluspunten:</p>
-<ul class="space-y-2 text-body-md text-white/85 mb-5">
-<li>• Eenmalig bedrag, geen maandelijkse website-kosten aan mij</li>
-<li>• Snel, veilig en licht — geen systeem dat kan verouderen of gehackt wordt</li>
-<li>• Alles op uw eigen naam: domein, hosting en site zijn van u</li>
-</ul>
-<p class="text-white font-bold text-body-md mb-2">Minpunten (zodat u het weet):</p>
-<ul class="space-y-2 text-body-md text-white/85">
-<li>• Hosting en domein betaalt u apart (klein jaarlijks bedrag)</li>
-<li>• De foto's zijn nu voorbeelden — met uw echte projectfoto's wordt de site pas écht sterk</li>
-<li>• Het is bewust één pagina: geen webshop of blog. Eerst het ijs breken, daarna groeien</li>
-<li>• Reviews moeten nog gevuld worden met echte klantreacties</li>
-<li>• Na de gratis maand lopen aanpassingen via een contract of losse afspraak</li>
-</ul>
-</div>
-</div>
-<p class="text-center text-white/80 text-body-md mt-10">Akkoord, of vragen? App of bel mij: <a class="text-secondary-fixed font-bold hover:underline" href="https://wa.me/5978576226">Seth — +597 857-6226</a>. Dan zetten we het contract op en gaan we live.</p>
-<p class="text-center text-white/50 text-[13px] mt-3">Deze sectie is alleen bedoeld voor u als eigenaar en wordt verwijderd zodra de site live gaat.</p>
-</div>
-</section>
 </main>
 <!-- Footer -->
 <footer class="bg-primary text-white border-t border-white/5">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter w-full px-gutter py-20 max-w-container-max mx-auto">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter w-full px-gutter py-20 max-w-container-max mx-auto">
 <div class="col-span-1 md:col-span-1 space-y-5">
 <div class="flex items-center gap-3">
 <img alt="Logo van Rifgroup N.V." class="w-10 h-10 rounded-full object-cover border border-white/20" src="assets/rif-logo.jpg"/>
